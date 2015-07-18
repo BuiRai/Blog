@@ -14,4 +14,12 @@ class ArticlesController < ApplicationController
 	def new
 		@article = Article.new
 	end
+
+	#POST /articles
+	def create
+		#First create the article with params
+		@article = Article.new(title:params[:article][:title], body: params[:article][:body])
+		@article.save  #save the articles on the DataBase
+		redirect_to @article #Redirect to /articles/:id
+	end
 end
