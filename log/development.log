@@ -3968,3 +3968,90 @@ Processing by ArticlesController#index as HTML
   [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
   Rendered articles/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-07-18 16:02:01 -0500
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 42ms (Views: 33.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:03 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ynRvD5ElaRNzJUqoAir8PelcQovbjJBDzAeuS2SragLYjqVkIiXYSze3Hi+I+BIVOUnSOHtflPRKiB91dqjQhQ==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 69ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:03 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7O0L6xS6tt+aImdFlrYRK4RQP5tfZZqnJnmLF6Gr2wb+F8GAp7oHh96wM8IcZP8DVEWvKP+2nhCg9jops6hhgQ==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 32.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:04 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gzEoRPo/58Jo7YYnUdQ/g/NujrzSJdp0hn5fPiue3pqRy+IvST9Wmix/0qDbBtGrI3seD3L23sMA8e4AOZ1kHQ==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:04 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FBuahYsqb4Kyv5ppgYmMa0FBow68GC9N0aR/iXWaQokG4VDuOCre2vYtzu4LW2JDkVQzvRzLK/pXK863Z5n4Dg==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:05 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FSpB5qXLDyrCnVETAi9/E8/iMQWV0QylNSe4vL+EYd4H0IuNFsu+coYPBZSI/ZE7H/ehtjUCCBKzqAmCrYfbWQ==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:05 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9IOfrUjeFifmPwtgcld8X/2fD5YkeAtjGvdUXS1M9GnmeVXG+96nf6KtX+f4hZJ3LYqfJYSrD9SceOVjP09O7g==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:06 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O/67G9YFev63No1ag7wqgGQoW1SlyiII5W4sfeNooDgpBHFwZQXLpvOk2d0JbsSotD3L5wUZJr9j4Z1D8Wsavw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:06 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"44nHzKFYoSfK39KA48bECySqmGj+kTtGcYmn+Qgc79nxcw2nElgQf45NhgdpFCoj9L8I215CP/H3BhbHGh9VXg==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:02:06 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFvXMxa/YKgWGgYb1YWlPiYZWfJ4UivGy9pYFEDsnIOeoR1Ypb/R8FKIUpxfV0sW9gzJQdiBL3FNVekqUu8mBA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.3ms)

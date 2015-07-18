@@ -19,7 +19,18 @@ class ArticlesController < ApplicationController
 	def create
 		#First create the article with params
 		@article = Article.new(title:params[:article][:title], body: params[:article][:body])
-		@article.save  #save the articles on the DataBase
-		redirect_to @article #Redirect to /articles/:id
+		
+		if @article.save  #save the articles on the DataBase
+			redirect_to @article #Redirect to /articles/:id
+		else
+			render :new #render of the action new
+		end
+		
+		
+	end
+
+	#PUT /articles/:id
+	def update
+		
 	end
 end
