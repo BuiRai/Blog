@@ -4055,3 +4055,458 @@ Processing by ArticlesController#create as HTML
   [1m[35m (0.1ms)[0m  rollback transaction
   Rendered articles/new.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:03:11 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFvXMxa/YKgWGgYb1YWlPiYZWfJ4UivGy9pYFEDsnIOeoR1Ypb/R8FKIUpxfV0sW9gzJQdiBL3FNVekqUu8mBA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/crhis/RoR/Blog/app/views/articles/new.html.erb:5: syntax error, unexpected ')', expecting =>
+...class:"form-control", require );@output_buffer.safe_append='
+...                               ^
+/home/crhis/RoR/Blog/app/views/articles/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	    ^
+/home/crhis/RoR/Blog/app/views/articles/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+/home/crhis/RoR/Blog/app/views/articles/new.html.erb:17: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/new.html.erb:5: syntax error, unexpected ')', expecting =>
+  app/views/articles/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/new.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/articles_controller.rb:26:in `create'
+
+
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.8ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.5ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (39.9ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:03:25 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFvXMxa/YKgWGgYb1YWlPiYZWfJ4UivGy9pYFEDsnIOeoR1Ypb/R8FKIUpxfV0sW9gzJQdiBL3FNVekqUu8mBA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/crhis/RoR/Blog/app/views/articles/new.html.erb:5: syntax error, unexpected ')', expecting =>
+...lass:"form-control", required );@output_buffer.safe_append='
+...                               ^
+/home/crhis/RoR/Blog/app/views/articles/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	    ^
+/home/crhis/RoR/Blog/app/views/articles/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+/home/crhis/RoR/Blog/app/views/articles/new.html.erb:17: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/articles/new.html.erb:5: syntax error, unexpected ')', expecting =>
+  app/views/articles/new.html.erb:13: syntax error, unexpected keyword_end, expecting ')'
+  app/views/articles/new.html.erb:15: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/articles/new.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/articles_controller.rb:26:in `create'
+
+
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.2ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (41.8ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFvXMxa/YKgWGgYb1YWlPiYZWfJ4UivGy9pYFEDsnIOeoR1Ypb/R8FKIUpxfV0sW9gzJQdiBL3FNVekqUu8mBA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/style.self-1338967fa21f7d4c18cb1fb5fefdf39e221fcdafbc2f7e09c66b9eaf782d57f3.css?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:03:31 -0500
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFvXMxa/YKgWGgYb1YWlPiYZWfJ4UivGy9pYFEDsnIOeoR1Ypb/R8FKIUpxfV0sW9gzJQdiBL3FNVekqUu8mBA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/style.self-1338967fa21f7d4c18cb1fb5fefdf39e221fcdafbc2f7e09c66b9eaf782d57f3.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:30 -0500
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFvXMxa/YKgWGgYb1YWlPiYZWfJ4UivGy9pYFEDsnIOeoR1Ypb/R8FKIUpxfV0sW9gzJQdiBL3FNVekqUu8mBA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/style.self-1338967fa21f7d4c18cb1fb5fefdf39e221fcdafbc2f7e09c66b9eaf782d57f3.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:07:56 -0500
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFvXMxa/YKgWGgYb1YWlPiYZWfJ4UivGy9pYFEDsnIOeoR1Ypb/R8FKIUpxfV0sW9gzJQdiBL3FNVekqUu8mBA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/style.self-1338967fa21f7d4c18cb1fb5fefdf39e221fcdafbc2f7e09c66b9eaf782d57f3.css?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:08:04 -0500
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:08:10 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wKqvHlyHkoivgmqnFS1c4JB4HIbl+0Dof8iIhh7+7/XSUGV174cj0OsQPiCf/7LIQG2MNUUoRF/5Rzm4DP1Vcg==", "article"=>{"title"=>"sdfsdfsdf", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:08:14 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w8fTRbvIx7LJbXZTfsQ2w6peKruv4FGd90+64+d1UHzRPRkuCMh26o3/ItT0Ftjreku6CA8zVSpxwAvd9Xbq+w==", "article"=>{"title"=>"", "body"=>"sdfsdfsdf"}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w8fTRbvIx7LJbXZTfsQ2w6peKruv4FGd90+64+d1UHzRPRkuCMh26o3/ItT0Ftjreku6CA8zVSpxwAvd9Xbq+w==", "article"=>{"title"=>"", "body"=>"sdfsdfsdf"}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 85ms (Views: 81.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/style.self-9aaf525be86560f922d4f905e498956fd21a69f3456d15208c90e54a3bcca090.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:18 -0500
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:09:21 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2JbBs1EnDr7V0oqH9CC2M++q95Mti7yk3cWRuvIYQlJmJFtfkQtYr/FHq2VAmzwH6s7bexlKkUV+Kd4+cvbjg==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2JbBs1EnDr7V0oqH9CC2M++q95Mti7yk3cWRuvIYQlJmJFtfkQtYr/FHq2VAmzwH6s7bexlKkUV+Kd4+cvbjg==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/style.self-9aaf525be86560f922d4f905e498956fd21a69f3456d15208c90e54a3bcca090.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:09:37 -0500
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:10:56 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W2JbBs1EnDr7V0oqH9CC2M++q95Mti7yk3cWRuvIYQlJmJFtfkQtYr/FHq2VAmzwH6s7bexlKkUV+Kd4+cvbjg==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 36.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:10:56 -0500
+
+
+Started GET "/assets/style.self-9aaf525be86560f922d4f905e498956fd21a69f3456d15208c90e54a3bcca090.css?body=1" for 127.0.0.1 at 2015-07-18 16:10:56 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:10:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:10:56 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:10:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:10:56 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:10:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:10:57 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:10:57 -0500
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:11:08 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ytHSbfNlNalI2aDjCQzaU6y5axTAGPyv5auZwtGgwTTYKxgGQGWE8QxL9GSD3jR7fKz7p2DL+BhjJCj8w6N7sw==", "article"=>{"title"=>"a", "body"=>"1234567890123456789"}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:11:14 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VLW6D7aP0LGBEdixe86+bgQf73imVo3jZtfCpJ+8cLlGT3BkBY9h6cWDjDbxHFBG1Ap/ywaFiVTgWHOajb/KPg==", "article"=>{"title"=>"", "body"=>"1234567890123456789a"}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:12:13 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zidF+MqQn7Ef/hAO4WI5x1dniRIQ+6mTT3o165oKKxHc3Y+TeZAu6VtsRIlrsNfvh3IZobAorSTJ9YTViAmRlg==", "article"=>{"title"=>"Nuevo y quinto", "body"=>"Ahora este artículo fue creado con validaciones en Rails."}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Nuevo y quinto"], ["body", "Ahora este artículo fue creado con validaciones en Rails."], ["created_at", "2015-07-18 21:12:13.844452"], ["updated_at", "2015-07-18 21:12:13.844452"]]
+  [1m[36m (221.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 228ms (ActiveRecord: 222.4ms)
+
+
+Started GET "/articles/5" for 127.0.0.1 at 2015-07-18 16:12:14 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered articles/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-07-18 16:12:17 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-07-18 16:15:09 -0500
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 34.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-07-18 16:15:09 -0500
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:15:13 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdAsbIMa0LjDMzwDbziPJbR5g878nSnK8r7kBKrf4sR3KuYHMBph4IehaITl6mENZGwTfVxOLX10MVU6uNxYQw==", "article"=>{"title"=>"Hola", "body"=>"asdasdasd"}, "commit"=>"Guardar"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mArticle Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = 'Hola' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered articles/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 264ms (Views: 43.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdAsbIMa0LjDMzwDbziPJbR5g878nSnK8r7kBKrf4sR3KuYHMBph4IehaITl6mENZGwTfVxOLX10MVU6uNxYQw==", "article"=>{"title"=>"Hola", "body"=>"asdasdasd"}, "commit"=>"Guardar"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.2ms)[0m  SELECT  1 AS one FROM "articles" WHERE "articles"."title" = 'Hola' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered articles/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 36.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/style.self-9aaf525be86560f922d4f905e498956fd21a69f3456d15208c90e54a3bcca090.css?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-18 16:19:38 -0500
