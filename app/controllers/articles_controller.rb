@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
 	#POST /articles
 	def create
 		#First create the article with params
-		@article = Article.new(title:params[:article][:title], body: params[:article][:body])
+		@article = Article.new(article_params)
 		
 		if @article.save  #save the articles on the DataBase
 			redirect_to @article #Redirect to /articles/:id
@@ -37,5 +37,10 @@ class ArticlesController < ApplicationController
 	#PUT /articles/:id
 	def update
 		#@article.update_atributes({title: "Nuevo titulo"})
+	end
+
+	private
+	def article_params
+		params.require(:article).permit(:title,:body)
 	end
 end
