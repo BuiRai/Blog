@@ -1,0 +1,25 @@
+html, body{
+	margin: 0px;
+	font-family: 'Montserrat', sans-serif;
+}
+a, a:visited{
+	color:inherit !important;
+}
+#logo{
+	font-size: 1.2em;
+}
+.no-margin{
+	margin:0px;
+}
+.be-red{
+	background-color: #E74C3C;
+}
+.white{
+	color: #ECF0F1;
+}
+.large-padding{
+	padding: 8px 5px;
+}
+.no-list{
+	list-style-type:none;
+}
