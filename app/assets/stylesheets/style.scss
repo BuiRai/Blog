@@ -23,3 +23,15 @@ a, a:visited{
 .no-list{
 	list-style-type:none;
 }
+.field{
+	margin-top:1em;
+}
+.form-control{
+	border: none;
+	border-bottom: 1px solid;
+	outline: none;
+	width: 100%;
+	display: block;
+	padding: 10px 0px;
+	font-size: 1.2em;
+}
