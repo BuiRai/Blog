@@ -4,7 +4,7 @@ resources :articles
 =begin
   get "/articles" index
   post "/articles" cretae
-  delete "/articles" delete
+  delete "/articles/:id" delete
   get "/articles/:id"  show
   get "/articles/new" new 
   get "/articles/edit" edit

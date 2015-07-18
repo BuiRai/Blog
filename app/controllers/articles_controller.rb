@@ -2,11 +2,12 @@ class ArticlesController < ApplicationController
 	
 	#GET /articles
 	def index
-		@articles = Article.all
+		@articles = Article.all #all the registers from the DB
 	end
 
 	#GET /articles/:id
 	def show
+		#Find one register by Id
 		@article = Article.find(params[:id]);
 	end
 
@@ -25,12 +26,16 @@ class ArticlesController < ApplicationController
 		else
 			render :new #render of the action new
 		end
-		
-		
+	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy #Delete the object from the DB
+		redirect_to articles_path
 	end
 
 	#PUT /articles/:id
 	def update
-		
+		#@article.update_atributes({title: "Nuevo titulo"})
 	end
 end
