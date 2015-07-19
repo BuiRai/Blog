@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-resources :articles
+  devise_for :users
+  resources :articles
 =begin
   get "/articles" index
   post "/articles" cretae
