@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
-	
+	#Before, verify if a user is logged, this is from device
+	before_action :authenticate_user!, except: [:show,:index]
+	before_action :set_article, except: [:index, :new, :create]
 	#GET /articles
 	def index
 		@articles = Article.all #all the registers from the DB
@@ -7,8 +9,7 @@ class ArticlesController < ApplicationController
 
 	#GET /articles/:id
 	def show
-		#Find one register by Id
-		@article = Article.find(params[:id]);
+		@article.update_visits_count
 	end
 
 	#GET /articles/new
@@ -17,7 +18,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def edit
-		@article = Article.find(params[:id]);
+		
 	end
 
 	#POST /articles
@@ -33,14 +34,12 @@ class ArticlesController < ApplicationController
 	end
 
 	def destroy
-		@article = Article.find(params[:id])
 		@article.destroy #Delete the object from the DB
 		redirect_to articles_path
 	end
 
 	#PUT /articles/:id
 	def update
-		@article = Article.find(params[:id])
 		if @article.update(article_params)
 			redirect_to @article
 		else
@@ -48,7 +47,12 @@ class ArticlesController < ApplicationController
 		end
 	end
 
+	#Private
 	private
+	def set_article
+		@article = Article.find(params[:id])
+	end
+
 	def article_params
 		params.require(:article).permit(:title,:body)
 	end

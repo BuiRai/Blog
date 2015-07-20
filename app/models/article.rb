@@ -11,4 +11,17 @@ class Article < ActiveRecord::Base
 	#validates the body if is null 
 	#validates if the body has a size  minimum 20 letters
 	validates :body, presence: true, length: {minimum: 20}
+	
+	#Before, the value of visits_count will be initialized in 0
+	before_save :set_visits_count
+
+	def update_visits_count
+		self.update(visits_count: self.visits_count + 1)
+	end
+
+	private
+
+	def set_visits_count
+		self.visits_count ||= 0
+	end
 end
