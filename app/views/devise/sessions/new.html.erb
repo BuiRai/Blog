@@ -1,17 +1,17 @@
 <div class="row center-xs">
   <div class="col-xs-8 col-md-6">
-    <div class="block">
+    <div class="block text-left">
       <h2>Iniciar sesión</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
           <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
+          <%= f.email_field :email, autofocus: true, class:"form-control" %>
         </div>
 
         <div class="field">
           <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
+          <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
         </div>
 
         <% if devise_mapping.rememberable? -%>
@@ -22,11 +22,12 @@
         <% end -%>
 
         <div class="actions">
-          <%= f.submit "Log in" %>
+          <%= f.submit "Iniciar Sesión", class:"btn be-red" %>
         </div>
       <% end %>
-
-      <%= render "devise/shared/links" %>
+      <div class="actions">
+        <%= render "devise/shared/links" %>  
+      </div>
     </div>
   </div>
 </div>
