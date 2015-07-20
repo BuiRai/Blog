@@ -1,6 +1,7 @@
 html, body{
 	margin: 0px;
 	font-family: 'Montserrat', sans-serif;
+	background-color: #F2F2F2;
 }
 .btn{
 	background-color: inherit;
@@ -22,13 +23,13 @@ a, a:visited{
 	margin:0px;
 }
 .red{
-	color: #E74C3C !important;
+	color: #2EFE64 !important;
 }
 .be-red{
-	background-color: #E74C3C;
+	background-color: #2EFE64;
 }
 .white{
-	color: #ECF0F1;
+	color: #151515;
 }
 .large-padding{
 	padding: 8px 5px;
@@ -50,4 +51,5 @@ a, a:visited{
 	display: block;
 	padding: 10px 0px;
 	font-size: 1.2em;
+	background-color: #F2F2F2;
 }
