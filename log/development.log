@@ -9739,3 +9739,104 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (0.3ms)
   Rendered partials/_navigation.html.erb (0.3ms)
 Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  Rendered partials/_navigation.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/style.self-e63f0785fd9669aaf6988cb078fb2076d751774dd132218c1d6d4d9c4e77ce2e.css?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-20 12:21:35 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-07-20 12:21:37 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered partials/_navigation.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-07-20 12:21:38 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.4ms)
+  Rendered partials/_navigation.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 12:21:41 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  Rendered partials/_navigation.html.erb (0.6ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-07-20 12:21:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.2ms)
+  Rendered partials/_navigation.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-07-20 12:21:47 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M7KfyEEzqADwgg6mVs67abCGfPMtkFXq/2d3gBZ7AGxG1aXnetc4rsSHq41RXQLTXgu7N0eCl2B6ctV7UUF36w==", "user"=>{"email"=>"buirai@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "buirai@hotmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-20 17:13:13.275150"], ["current_sign_in_at", "2015-07-20 17:21:47.729821"], ["sign_in_count", 7], ["updated_at", "2015-07-20 17:21:47.730960"], ["id", 1]]
+  [1m[36m (137.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 263ms (ActiveRecord: 137.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 12:21:47 -0500
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+  Rendered partials/_navigation.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-07-20 12:21:50 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qhv3cDtL+0hC9Ow2ccFCieamyg4f53kiLg4lquUrZPS4vxwpsYRzIc3zFEB2lgoy9vRjpKNFaLXRChEimnxi2Q=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-20 12:21:50 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered partials/_navigation.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
