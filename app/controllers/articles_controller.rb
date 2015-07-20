@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
 	#POST /articles
 	def create
 		#First create the article with params
-		@article = Article.new(article_params)
+		@article = current_user.articles.new(article_params)
 		
 		if @article.save  #save the articles on the DataBase
 			redirect_to @article #Redirect to /articles/:id
