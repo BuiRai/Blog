@@ -19,6 +19,13 @@ class Article < ActiveRecord::Base
 	#One to Many, An article has a lot of comments
 	has_many :comments
 
+	#--==--This is for paperclip (a gem)--==--
+	has_attached_file :cover, styles: { medium:"1280x720", thumb:"800x600" }
+
+	#For security, upload the type we want, this is from paperclip.
+	#in this case the mean of /\Aimage\/.*\Z/ is an image of any extension.
+	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
+
 	def update_visits_count
 		self.update(visits_count: self.visits_count + 1)
 	end
