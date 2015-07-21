@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
 	#Escribir métodos
 
 	belongs_to :user #One to Many, an article belong to only one user
+	
 	#validates the title if is null
 	#validates the title if is unique
 	validates :title, presence: true, uniqueness: true
@@ -14,6 +15,9 @@ class Article < ActiveRecord::Base
 	
 	#Before, the value of visits_count will be initialized in 0
 	before_save :set_visits_count
+
+	#One to Many, An article has a lot of comments
+	has_many :comments
 
 	def update_visits_count
 		self.update(visits_count: self.visits_count + 1)

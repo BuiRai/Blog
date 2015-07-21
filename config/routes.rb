@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   
-  resources :comments
   devise_for :users
-  resources :articles
+  #Nest comments in the articles, example:
+  #localhost/3000/articles/2/comments
+  resources :articles do
+    resources :comments
+  end
 =begin
   get "/articles" index
   post "/articles" cretae
