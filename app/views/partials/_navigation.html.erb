@@ -3,12 +3,19 @@
 		<ul class="no-list row center-xs middle-xs">
 			<li>
 				<h1 id="logo" class="no-margin">
-					<%= link_to "BLOG DE ANIME", root_path %>
+					<%= link_to "Blog de Anime", root_path %>
 				</h1>
 			</li>
 			<li class="col-md">
 				<%= link_to "Artículos", articles_path %>
 			</li>
+			<% @categories.each do |category| %>
+				<li class="col-md">
+					<%= link_to category.name, category %>
+				</li>
+			<% end %>
+
+			<!--Options for log-in and log-out-->
 			<% if user_signed_in? %>
 				<li class="col-md">
 					<%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
