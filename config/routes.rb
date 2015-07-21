@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :categories
   devise_for :users
   #Nest comments in the articles, example:
   #localhost/3000/articles/2/comments
