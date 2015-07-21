@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   #Nest comments in the articles, example:
   #localhost/3000/articles/2/comments
   resources :articles do
-    resources :comments
+    resources :comments, only: [:create, :destroy, :update]
   end
 =begin
   get "/articles" index
