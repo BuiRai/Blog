@@ -19,9 +19,11 @@
 		<%= f.text_area :body, placeholder:"Escribe aquí el articulo", style: "height:300px;", class:"form-control" %>
 	</div>
 	<div class="field">
-		<label for="">Categorias</label>
+		<label>Categorías</label>
 		<% @categories.each do |category| %>
-			<%= category.name %>
+		<div class="field">
+			<%= check_box_tag "categories[]", category.id %> <%= category.name %>
+		</div>
 		<% end %>
 	</div>
 	<div class="field">

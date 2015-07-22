@@ -27,7 +27,8 @@ class ArticlesController < ApplicationController
 	def create
 		#First create the article with params
 		@article = current_user.articles.new(article_params)
-		
+		@article.categories = params[:categories]
+
 		if @article.save  #save the articles on the DataBase
 			redirect_to @article #Redirect to /articles/:id
 		else
@@ -56,6 +57,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-		params.require(:article).permit(:title, :body, :cover)
+		params.require(:article).permit(:title, :body, :cover, :categories)
 	end
 end
