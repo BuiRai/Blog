@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
  	has_many :articles #One to Many, a user can have a lot of articles
  	has_many :comments #One to Many, a user can have a lot of comments
+ 	include PermissionsConcern
 end
