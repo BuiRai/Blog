@@ -8,6 +8,12 @@ class Article < ActiveRecord::Base
 	#One to Many, An article has a lot of comments
 	has_many :comments
 
+	
+
+	#Many to Many, an article has a lot of categories throught the table 'HasCategory'
+	has_many :has_categories
+	has_many :categories, through: :has_categories
+
 	#validates the title if is null
 	#validates the title if is unique
 	validates :title, presence: true, uniqueness: true
