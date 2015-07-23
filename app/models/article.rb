@@ -38,6 +38,12 @@ class Article < ActiveRecord::Base
 	#in this case the mean of /\Aimage\/.*\Z/ is an image of any extension.
 	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 
+	#scope to bring published articles
+	scope :publicados, ->{ where(state: "published") }
+
+	#scope to bring the 10 latest articles
+	scope :ultimos, ->{ order("created_at DESC").limit(1) }
+
 	#Custom setter
 	def categories=(value)
 		@categories = value

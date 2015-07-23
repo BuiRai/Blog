@@ -8,7 +8,8 @@ class ArticlesController < ApplicationController
 
 	#GET /articles
 	def index
-		@articles = Article.all #all the registers from the DB
+		#all the registers from the DB
+		@articles = Article.publicados.ultimos
 	end
 
 	#GET /articles/:id
