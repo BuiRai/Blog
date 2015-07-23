@@ -1,4 +1,7 @@
 class Article < ActiveRecord::Base
+	#include this module, from the gem AASM
+	include AASM
+
 	# la tabla ==> articles
 	#campos ==> article.title() ==> 'El título'
 	#Escribir métodos
@@ -42,6 +45,21 @@ class Article < ActiveRecord::Base
 
 	def update_visits_count
 		self.update(visits_count: self.visits_count + 1)
+	end
+
+	#AASM
+	aasm column: "state" do
+		#states
+		state :in_draft, initial: true
+		state :published
+
+		#transitions, publish and unpublish
+		event :publish do
+			transitions from: :in_draft, to: :published
+		end
+		event :unpublish do
+			transitions from: :published, to: :in_draft
+		end
 	end
 
 	private
