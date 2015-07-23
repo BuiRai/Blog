@@ -42,7 +42,7 @@ class Article < ActiveRecord::Base
 	scope :publicados, ->{ where(state: "published") }
 
 	#scope to bring the 10 latest articles
-	scope :ultimos, ->{ order("created_at DESC").limit(1) }
+	scope :ultimos, ->{ order("created_at DESC").limit(10) }
 
 	#Custom setter
 	def categories=(value)

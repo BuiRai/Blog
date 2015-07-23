@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
 	before_action :set_article, except: [:index, :new, :create]
 	before_action :authenticate_editor!, only: [:new, :create, :update]
-	before_action :authenticate_admin!, only: [:destroy]
+	before_action :authenticate_admin!, only: [:destroy, :publish]
 
 	#GET /articles
 	def index
@@ -53,6 +53,13 @@ class ArticlesController < ApplicationController
 		else
 			render :edit
 		end
+	end
+
+	#Method to publish an article, must change the stage of 
+	#the article and then, redirect to the article
+	def publish
+		@article.publish!
+		redirect_to @article
 	end
 
 	#Private

@@ -26,6 +26,9 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'welcome#dashboard'
 
+  #The route of dashboard, method put at '/articles/:id/publish'
+  put '/articles/:id/publish', to: 'articles#publish'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

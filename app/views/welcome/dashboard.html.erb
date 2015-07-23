@@ -1,0 +1,12 @@
+<% @articles.each do |article| %>
+	<h1><%= link_to article.title, article %></h1>
+	<div>
+		<%= article.body %> - <%= link_to "Eliminar articulo",article, class:"red", method: :delete %> - 
+		
+		<% #If the article is 'is_draft' then show the link to publish %>
+		<% if article.may_publish? %>
+			<% #method put at '/articles/#{ article.id }/publish' %>
+			<%= link_to "Publicar", "/articles/#{ article.id }/publish", class:"blue", method: :put %>
+		<% end %>
+	</div>
+<% end %>
