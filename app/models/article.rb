@@ -47,6 +47,14 @@ class Article < ActiveRecord::Base
 		self.update(visits_count: self.visits_count + 1)
 	end
 
+	#----------------------------------------------------------
+	#TO change state from stage type on the console of rails:
+	#Article.(item).publish! or
+	#Article.(item).unpublish! or
+	#And to check just type on the rails console
+	#Article Article.(item).may_publish? or
+	#Article Article.(item).may_unpublish?
+	#----------------------------------------------------------
 	#AASM
 	aasm column: "state" do
 		#states

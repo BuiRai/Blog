@@ -24794,3 +24794,385 @@ Migrating to AddColumnStateToArticle (20150723172945)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddColumnStateToArticle (20150723172945)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "aarticles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "cover_file_name" varchar, "cover_content_type" varchar, "cover_file_size" integer, "cover_updated_at" datetime, "state" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_aarticles_on_user_id" ON "aarticles" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "articles"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (2, 'Segundo articulo', 'Este es un segundo articulo', 4, '2015-07-17 20:55:37.217331', '2015-07-20 20:24:58.218123', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (3, 'Tercer articulo', 'Este es un nuevo artículo :''v', 39, '2015-07-18 20:47:38.060546', '2015-07-21 17:10:08.747167', NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (7, 'Cuarto artículo', 'Este es un artículo de prueba :D', 4, '2015-07-19 17:39:24.152767', '2015-07-22 21:25:54.789242', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (8, 'Artículo de BuiRai', 'Este artículo fue creado por el usuario BuiRai :D', 30, '2015-07-20 19:19:22.578019', '2015-07-23 00:19:05.253417', 1, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (9, 'Nuevo artículo con 0 visitas', 'Hola mundo, este artículo está con 0 visitas', 9, '2015-07-20 20:09:10.595055', '2015-07-23 00:11:47.543770', 1, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (10, 'Portadas', 'Nuevo artículo con portada :D
+Este artículo ya tiene una imagen :v', 11, '2015-07-21 20:04:41.315159', '2015-07-22 21:25:57.333068', 1, '38599_bleach.jpg', 'image/jpeg', 253619, '2015-07-21 20:04:40.527897', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (11, 'Hola', 'HolaHolaHolaHolaHolamn
+mnmnmnmnmnmnmnmnmnmnmnmnmnm', 1, '2015-07-22 21:34:58.130950', '2015-07-22 21:34:58.363531', 1, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (12, 'Basura', 'BasuraBasuraBasuraBasuraBasuraBasura
+BasuraBasuraBasuraBasura
+Basura
+Basura
+Basura', 2, '2015-07-22 21:38:29.824273', '2015-07-22 21:40:22.684240', 1, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (13, '123', '123123123123123123123123123123123123123123123123123123123123123123123123123123123123', 1, '2015-07-22 21:40:37.685796', '2015-07-22 21:40:37.951920', 1, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (14, 'Este si, ya en serio', 'Este si, ya en serio Este si, ya en serio Este si, ya en serio
+Este si, ya en serio Este si, ya en serio
+Este si, ya en serio', 6, '2015-07-22 21:50:02.985786', '2015-07-23 01:03:14.329788', 1, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aarticles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at","state") VALUES (15, 'Este gore y shonen', 'Este gore y shonenEste gore y shonenEste gore y shonenEste gore y shonenEste gore y shonen
+Este gore y shonenEste gore y shonenEste gore y shonenEste gore y shonen', 3, '2015-07-23 00:08:01.404272', '2015-07-23 00:19:16.895705', 1, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "articles"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "cover_file_name" varchar, "cover_content_type" varchar, "cover_file_size" integer, "cover_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aarticles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aarticles_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "aarticles"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (2, 'Segundo articulo', 'Este es un segundo articulo', 4, '2015-07-17 20:55:37.217331', '2015-07-20 20:24:58.218123', NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (3, 'Tercer articulo', 'Este es un nuevo artículo :''v', 39, '2015-07-18 20:47:38.060546', '2015-07-21 17:10:08.747167', NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (7, 'Cuarto artículo', 'Este es un artículo de prueba :D', 4, '2015-07-19 17:39:24.152767', '2015-07-22 21:25:54.789242', NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (8, 'Artículo de BuiRai', 'Este artículo fue creado por el usuario BuiRai :D', 30, '2015-07-20 19:19:22.578019', '2015-07-23 00:19:05.253417', 1, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (9, 'Nuevo artículo con 0 visitas', 'Hola mundo, este artículo está con 0 visitas', 9, '2015-07-20 20:09:10.595055', '2015-07-23 00:11:47.543770', 1, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (10, 'Portadas', 'Nuevo artículo con portada :D
+Este artículo ya tiene una imagen :v', 11, '2015-07-21 20:04:41.315159', '2015-07-22 21:25:57.333068', 1, '38599_bleach.jpg', 'image/jpeg', 253619, '2015-07-21 20:04:40.527897')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (11, 'Hola', 'HolaHolaHolaHolaHolamn
+mnmnmnmnmnmnmnmnmnmnmnmnmnm', 1, '2015-07-22 21:34:58.130950', '2015-07-22 21:34:58.363531', 1, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (12, 'Basura', 'BasuraBasuraBasuraBasuraBasuraBasura
+BasuraBasuraBasuraBasura
+Basura
+Basura
+Basura', 2, '2015-07-22 21:38:29.824273', '2015-07-22 21:40:22.684240', 1, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (13, '123', '123123123123123123123123123123123123123123123123123123123123123123123123123123123123', 1, '2015-07-22 21:40:37.685796', '2015-07-22 21:40:37.951920', 1, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (14, 'Este si, ya en serio', 'Este si, ya en serio Este si, ya en serio Este si, ya en serio
+Este si, ya en serio Este si, ya en serio
+Este si, ya en serio', 6, '2015-07-22 21:50:02.985786', '2015-07-23 01:03:14.329788', 1, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "articles" ("id","title","body","visits_count","created_at","updated_at","user_id","cover_file_name","cover_content_type","cover_file_size","cover_updated_at") VALUES (15, 'Este gore y shonen', 'Este gore y shonenEste gore y shonenEste gore y shonenEste gore y shonenEste gore y shonen
+Este gore y shonenEste gore y shonenEste gore y shonenEste gore y shonen', 3, '2015-07-23 00:08:01.404272', '2015-07-23 00:19:16.895705', 1, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "aarticles"
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20150723172945"]]
+  [1m[35m (158.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categories_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categories_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categories_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categories_on_article_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnStateToArticle (20150723172945)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "articles" ADD "state" varchar DEFAULT 'in_draft'[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150723172945"]]
+  [1m[36m (139.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_articles_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categories_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categories_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_has_categories_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_has_categories_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-23 12:50:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (7.1ms)
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered partials/_navigation.html.erb (9.6ms)
+Completed 200 OK in 420ms (Views: 403.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/flexboxgrid.self-029c491acfc903b0be6a78fc85108dd97195f3300e5d318178fb5a53e8eaa662.css?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/style.self-e63f0785fd9669aaf6988cb078fb2076d751774dd132218c1d6d4d9c4e77ce2e.css?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/comments.self-198b36d2d00ea6154a3a7345e6a9fc8402bea2c275db51393c0edc3a41c41fc9.js?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-07-23 12:50:10 -0500
+
+
+Started GET "/articles" for 127.0.0.1 at 2015-07-23 12:50:43 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (14.6ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered partials/_navigation.html.erb (2.5ms)
+Completed 200 OK in 117ms (Views: 82.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-07-23 12:50:45 -0500
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 46ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-07-23 12:50:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (50.7ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered partials/_navigation.html.erb (1.6ms)
+Completed 200 OK in 156ms (Views: 120.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-07-23 12:50:52 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qUGUUMdMCrgpD5Ct9nd+yQLpNHH7bZnwZOTK0sGtdPkJeUN2vz08Zwk6188Qb3eExLresWvaI3BOtWneqzzQ3Q==", "user"=>{"email"=>"buirai@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar Sesión"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "buirai@hotmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-23 01:09:25.644464"], ["current_sign_in_at", "2015-07-23 17:50:52.283911"], ["sign_in_count", 22], ["updated_at", "2015-07-23 17:50:52.285142"], ["id", 1]]
+  [1m[36m (144.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/new
+Completed 302 Found in 419ms (ActiveRecord: 145.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2015-07-23 12:50:52 -0500
+Processing by ArticlesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered articles/_form.html.erb (72.4ms)
+  Rendered articles/new.html.erb within layouts/application (88.8ms)
+  Rendered partials/_navigation.html.erb (1.2ms)
+Completed 200 OK in 156ms (Views: 152.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2015-07-23 12:51:26 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qyc0YtknryIV7Kql4GvQUpyppBkx70luOPmf6el+hELzIcCyVDXnw7xSio6mDGccIHHVpiTmTYJP7tSjmPfW2g==", "article"=>{"title"=>"Artículo state", "body"=>"Primer artículo con estado :D, el estado inicial es \"in_draft\" :D"}, "categories"=>["6"], "commit"=>"Guardar"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.2ms)[0m  SELECT  1 AS one FROM "articles" WHERE "articles"."title" = 'Artículo state' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("title", "body", "user_id", "visits_count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Artículo state"], ["body", "Primer artículo con estado :D, el estado inicial es \"in_draft\" :D"], ["user_id", 1], ["visits_count", 0], ["created_at", "2015-07-23 17:51:26.871285"], ["updated_at", "2015-07-23 17:51:26.871285"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "has_categories" ("category_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["category_id", 6], ["article_id", 16], ["created_at", "2015-07-23 17:51:26.891625"], ["updated_at", "2015-07-23 17:51:26.891625"]]
+  [1m[36m (177.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/articles/16
+Completed 302 Found in 361ms (ActiveRecord: 178.9ms)
+
+
+Started GET "/articles/16" for 127.0.0.1 at 2015-07-23 12:51:27 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.2ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'Artículo state' AND "articles"."id" != 16) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "articles" SET "visits_count" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["visits_count", 1], ["updated_at", "2015-07-23 17:51:27.112301"], ["id", 16]]
+  [1m[35m (223.0ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "has_categories" ON "categories"."id" = "has_categories"."category_id" WHERE "has_categories"."article_id" = ?  [["article_id", 16]]
+  Rendered comments/_form.html.erb (3.5ms)
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 16]]
+  Rendered articles/show.html.erb within layouts/application (40.9ms)
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered partials/_navigation.html.erb (2.4ms)
+Completed 200 OK in 397ms (Views: 119.9ms | ActiveRecord: 225.1ms)
+
+
+Started GET "/covers/thumb/missing.png" for 127.0.0.1 at 2015-07-23 12:51:27 -0500
+
+ActionController::RoutingError (No route matches [GET] "/covers/thumb/missing.png"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/crhis/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/crhis/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/crhis/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.5ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.1ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.3ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/crhis/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (73.3ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.2ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'Artículo state' AND "articles"."id" != 16) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mArticle Exists (0.2ms)[0m  SELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'Artículo state' AND "articles"."id" != 16) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "articles" SET "state" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["state", "published"], ["updated_at", "2015-07-23 17:54:35.757606"], ["id", 16]]
+  [1m[35m (103.1ms)[0m  commit transaction
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" DESC LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" ASC LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mArticle Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "articles" WHERE ("articles"."title" = 'Segundo articulo' AND "articles"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "articles" SET "state" = ?, "updated_at" = ? WHERE "articles"."id" = ?  [["state", "published"], ["updated_at", "2015-07-23 17:56:45.236689"], ["id", 2]]
+  [1m[36m (131.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArticle Load (0.7ms)[0m  SELECT  "articles".* FROM "articles"  ORDER BY "articles"."id" ASC LIMIT 1
