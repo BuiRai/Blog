@@ -38,6 +38,9 @@ gem 'will_paginate'
 
 #markup editor
 gem "epic-editor-rails"
+
+#Clean the HTML from the MarKup for security
+gem "sanitize"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
