@@ -9,7 +9,10 @@ class ArticlesController < ApplicationController
 	#GET /articles
 	def index
 		#all the registers from the DB
-		@articles = Article.publicados.ultimos
+		#@articles = Article.publicados.ultimos
+
+		#paginate is from the gem "will_paginate"
+		@articles = Article.paginate(page: params[:page], per_page:5).publicados.ultimos
 	end
 
 	#GET /articles/:id
