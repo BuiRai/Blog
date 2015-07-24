@@ -16,7 +16,8 @@
 	Visitas: <%= @article.visits_count %>
 </p>
 <div>
-	<%= @article.body %>
+	<!--To show the body in HTML just use: html_safe-->
+	<%= @article.body.html_safe %>
 </div>
 <div class="field">
 	<h3>Comentarios</h3>
