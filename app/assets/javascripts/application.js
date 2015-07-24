@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+
+//Use the markdown editor
+//= require epiceditor
 //= require_tree .

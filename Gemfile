@@ -35,6 +35,9 @@ gem 'aasm'
 
 #pagination
 gem 'will_paginate'
+
+#markup editor
+gem "epic-editor-rails"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
