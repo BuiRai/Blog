@@ -30,6 +30,7 @@ class Article < ActiveRecord::Base
 
 	#After, show information, or errors
 	after_create :save_categories
+	after_create :send_mail
 
 	#--==--This is for paperclip (a gem)--==--
 	has_attached_file :cover, styles: { medium:"1280x720", thumb:"800x600" }
@@ -77,6 +78,10 @@ class Article < ActiveRecord::Base
 	end
 
 	private
+
+	def send_mail
+		ArticleMailer.new_article(self).deliver_later
+	end
 
 	def save_categories
 		unless @categories.nil?

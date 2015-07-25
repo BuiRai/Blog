@@ -41,6 +41,7 @@ gem "epic-editor-rails"
 
 #Clean the HTML from the MarKup for security
 gem "sanitize"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -53,6 +54,9 @@ gem "sanitize"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  #mails
+  gem "letter_opener"
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
