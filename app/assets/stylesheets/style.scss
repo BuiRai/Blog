@@ -25,6 +25,9 @@ a, a:visited{
 .red{
 	color: #2EFE64 !important;
 }
+.text-center{
+	text-align: center;
+}
 .blue{
 	color:blue !important;
 }
@@ -45,6 +48,19 @@ a, a:visited{
 }
 .text-left{
 	text-align: left;
+}
+.relative{
+	position:relative;
+}
+.article-height{
+	height:150px;
+}
+.background-cover{
+	background-position:center;
+	background-size:cover;
+}
+.absolute{
+	position:absolute;
 }
 .form-control{
 	border: none;
