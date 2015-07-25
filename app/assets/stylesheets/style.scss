@@ -22,20 +22,38 @@ a, a:visited{
 .no-margin{
 	margin:0px;
 }
-.red{
-	color: #2EFE64 !important;
-}
 .text-center{
 	text-align: center;
 }
-.blue{
-	color:blue !important;
+.text-right{
+	text-align:right;
+}
+.text-justify{
+	text-align:justify;
+}
+.be-big{
+	font-size:2em;
+}
+.be-small{
+	font-size:12px;
+}
+.underline{
+	text-decoration:underline;
 }
 .be-red{
 	background-color: #2EFE64;
 }
+.red{
+	color: #2EFE64 !important;
+}
+.blue{
+	color:blue !important;
+}
 .white{
 	color: #151515;
+}
+.gray{
+	color:#616161;
 }
 .large-padding{
 	padding: 8px 5px;
@@ -55,6 +73,10 @@ a, a:visited{
 .article-height{
 	height:150px;
 }
+
+.light-border{
+	
+}
 .background-cover{
 	background-position:center;
 	background-size:cover;
@@ -71,4 +93,7 @@ a, a:visited{
 	padding: 10px 0px;
 	font-size: 1.2em;
 	background-color: #F2F2F2;
+}
+.bottom-space{
+	margin-bottom:2em;
 }
